@@ -2,7 +2,7 @@
 
 With Entity Framework Core, it is possible to maintain multiple database provider migration projects.  Which is useful when a single database context might be deployed with a SqlServer for one customer, or a Sqlite database for another customer.  The same database context code can be used with a minor switch in the configuration method.
 
-Documentation for this capability can be found here, [Microsoft - Migrations with Multiple Providers](https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/providers?tabs=dotnet-core-cli), and here, [Using a Separate Migrations Project](https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/projects?tabs=dotnet-core-cli).
+Documentation for this capability can be found here, [Microsoft - Migrations with Multiple Providers](https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/providers?tabs=dotnet-core-cli), and here, [Microsoft - Using a Separate Migrations Project](https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/projects?tabs=dotnet-core-cli).
 
 This project attempts to illustrate an edge case that makes separate class library projects a requirement when multiple database providers are used.  There seems to be an error in an internal Migrate method that ignores any target migration id when supplied.  Noting that this is all undocumented and not supported.  It would be very nice to have support for the scenario described here.
 
